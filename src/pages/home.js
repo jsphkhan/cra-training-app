@@ -16,7 +16,7 @@ export default function HomePage() {
         const data = await response.json();
         const users = _.get(data, 'data', {});
         // console.log(users);
-        setUsers(users);
+        setUsers([...users, ...users]); // duplicate data
       } catch (err) {
         console.log('Error when making call: ', err);
       }
