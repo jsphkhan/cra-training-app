@@ -1,0 +1,37 @@
+.homecontainer {
+  padding: 20px;
+}
+
+.listcontainer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.listcontainer li {
+  padding: 25px;
+  display: flex;
+  border-bottom: 1px solid #dadada;
+}
+
+.img {
+  width: 80px;
+}
+
+.listcontainer li img {
+  border-radius: 100%;
+}
+
+.name {
+  margin-left: 15px;
+  flex: 1;
+}
+
+.name > span {
+  font-size: 1.3rem;
+}
+
+.name > p {
+  color: #9a9a9a;
+}
