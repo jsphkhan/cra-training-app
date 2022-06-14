@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // normal import the pages
@@ -12,10 +13,10 @@ import DetailsPage from './pages/details';
   webpackPrefetch: true
 */
 // const HomePage = React.lazy(() =>
-//   import(/* webpackChunkName: "homeChunk" */ './pages')
+//   import(/* webpackChunkName: "homeChunk" */ './pages/home')
 // );
 // const DetailsPage = React.lazy(() =>
-//   import(/* webpackChunkName: "detailsChunk" */ './pages/DetailsPage')
+//   import(/* webpackChunkName: "detailsChunk" */ './pages/details')
 // );
 
 function App() {

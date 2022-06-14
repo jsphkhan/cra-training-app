@@ -28,7 +28,12 @@ export default function HomePage() {
     <>
       <div className='homecontainer'>
         <h1>Home Page (SSR)</h1>
-        <Link to="/details">Details</Link>
+        <Link to='/details'>Details</Link>
+      </div>
+      <div className='hero'>
+        <img src='/images/mob-banner-bg.png' alt='hero' />
+      </div>
+      <div className='homecontainer'>
         <ul className='listcontainer'>
           {users.map((user) => {
             const id = _.get(user, 'id');
