@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <>
       <div className='homecontainer'>
-        <h1>Home Page (SSR)</h1>
+        <h1>Home Page (CSR)</h1>
         <Link to='/details'>Details</Link>
       </div>
       {/* <div className='hero'> */}

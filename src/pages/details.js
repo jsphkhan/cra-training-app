@@ -15,7 +15,7 @@ export default function DetailsPage() {
 
   return (
     <div className='detailscontainer'>
-      <h1>Details Page (SSG)</h1>
+      <h1>Details Page (CSR)</h1>
       <Link to='/'>Back</Link>
       <div>
         <p>

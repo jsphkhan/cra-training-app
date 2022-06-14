@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // normal import the pages
-import HomePage from './pages/home';
-import DetailsPage from './pages/details';
+// import HomePage from './pages/home';
+// import DetailsPage from './pages/details';
 
 //route level code splitting
 /* 
@@ -12,20 +12,22 @@ import DetailsPage from './pages/details';
 
   webpackPrefetch: true
 */
-// const HomePage = React.lazy(() =>
-//   import(/* webpackChunkName: "homeChunk" */ './pages/home')
-// );
-// const DetailsPage = React.lazy(() =>
-//   import(/* webpackChunkName: "detailsChunk" */ './pages/details')
-// );
+const HomePage = React.lazy(() =>
+  import(/* webpackChunkName: "homeChunk" */ './pages/home')
+);
+const DetailsPage = React.lazy(() =>
+  import(/* webpackChunkName: "detailsChunk" */ './pages/details')
+);
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/details' element={<DetailsPage />} />
-      </Routes>
+      <React.Suspense fallback={<p>Loading...</p>}>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/details' element={<DetailsPage />} />
+        </Routes>
+      </React.Suspense>
     </Router>
   );
 }
